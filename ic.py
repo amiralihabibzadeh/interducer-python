@@ -1,8 +1,17 @@
-age = int(input("age : "))
-name = str(input("name : "))
-last_name = str(input("last_name"))
-job = str(input("job : "))
-interduce = (
-    "hello im {0} but my friends call me {1} im {2} years old and my job is {3}")
-print(interduce.format(last_name, name, age, job))
+favorite_food = input("favorite_food: ")
+age = input("age: ")
+name = input("name: ")
+last_name = input("last_name: ")
+job = input("job: ")
+
+try:
+    age = int(age)
+except ValueError:
+    print("Invalid age input, please enter a valid integer.")
+    exit()
+
+introduce = """Hello, I'm {last_name}, but my friends call me {name}. I'm {age} years old, 
+and my job is {job}. My favorite food is {favorite_food}, and I have {friend_count} friend.
+"""
+print(introduce.format(last_name=last_name, name=name, age=age, job=job, favorite_food=favorite_food, friend_count=friend_count))
 print("Done✔")
